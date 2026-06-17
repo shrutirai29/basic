@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff0f6" />
+    <title>Mumma ke liye</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" data-view="home">For Mumma</a>
+      <nav aria-label="Main navigation">
+        <button class="nav-link active" type="button" data-view="home">Home</button>
+        <button class="nav-link" type="button" data-view="memories">Memories</button>
+        <button class="nav-link" type="button" data-view="enjoy">Enjoy</button>
+        <button class="nav-link" type="button" data-view="letter">Letter</button>
+      </nav>
+      <button class="lang-toggle" id="languageToggle" type="button" aria-pressed="false">हिंदी</button>
+    </header>
+
+    <main class="app-shell">
+      <section class="screen home-screen active" id="home" aria-labelledby="home-title">
+        <div class="love-bg" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Mother's Day special</p>
+          <h1 id="home-title">Hello Mumma</h1>
+          <p class="hero-message">
+            finally tumhari beti badi ho gai hai, chup chup ke cards banane ke
+            bajaye ab ye sab bana ke bhej rahi hai.
+          </p>
+          <p class="hero-note">
+            Explore everything on this website. I am sure you will love it.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-view="memories">Enter memories</button>
+            <button class="secondary-action" type="button" data-view="enjoy">Play games</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen memories-screen" id="memories" aria-labelledby="memories-title">
+        <div class="gallery-hud">
+          <div>
+            <p class="eyebrow">3D memory walk</p>
+            <h2 id="memories-title">Mumma ki walking art gallery</h2>
+          </div>
+          <p id="galleryCounter">Frame 1 / 59</p>
+        </div>
+
+        <div class="gallery-viewport" id="galleryViewport" aria-label="Walkable 3D gallery">
+          <div class="gallery-ceiling" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="gallery-floor" aria-hidden="true"></div>
+          <div class="gallery-back-wall" aria-hidden="true"></div>
+          <div class="gallery-world" id="galleryWorld"></div>
+        </div>
+
+        <div class="walk-controls" aria-label="Gallery walking controls">
+          <button type="button" data-walk="left">Turn left</button>
+          <button type="button" data-walk="forward">Walk</button>
+          <button type="button" data-walk="right">Turn right</button>
+          <button type="button" data-walk="back">Back</button>
+        </div>
+        <p class="control-note">Use buttons or keyboard arrows. Tap any frame to bring it closer.</p>
+      </section>
+
+      <section class="screen enjoy-screen" id="enjoy" aria-labelledby="enjoy-title">
+        <div class="section-head">
+          <p class="eyebrow">Mumma's favourite games</p>
+          <h2 id="enjoy-title">You should also play them</h2>
+          <p>
+            I picked polished online games instead of boring half-made copies,
+            so you can actually enjoy them with proper features, levels, hints,
+            and smooth mobile play.
+          </p>
+        </div>
+
+        <div class="game-grid">
+          <article class="game-launch">
+            <span class="game-badge">01</span>
+            <h3>Sudoku</h3>
+            <p>Calm brain game with proper difficulty levels and mobile support.</p>
+            <a class="primary-action" href="https://www.foxy-sudoku.com/en/" target="_blank" rel="noreferrer">Play Sudoku</a>
+            <small>Mission: solve one puzzle and get ek tight kiss.</small>
+          </article>
+          <article class="game-launch">
+            <span class="game-badge">02</span>
+            <h3>2048</h3>
+            <p>Swipe, merge, and reach 2048. Simple but very addictive.</p>
+            <a class="primary-action" href="https://play2048.co/" target="_blank" rel="noreferrer">Play 2048</a>
+            <small>Mission: reach 512 and I will make chai or coffee.</small>
+          </article>
+          <article class="game-launch">
+            <span class="game-badge">03</span>
+            <h3>Jigsaw Puzzle</h3>
+            <p>Turn photos into puzzles, or play ready-made relaxing puzzles.</p>
+            <a class="primary-action" href="https://tanggle.io/" target="_blank" rel="noreferrer">Play Jigsaw</a>
+            <small>Mission: finish a puzzle and get one long hug.</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen letter-screen" id="letter" aria-labelledby="letter-title">
+        <div class="letter-wrap">
+          <div class="section-head">
+            <p class="eyebrow">Secret letter</p>
+            <h2 id="letter-title">Meri taraf se ek locked letter</h2>
+            <p>Password lagaya hai, kyunki ye part thoda extra special hai.</p>
+          </div>
+
+          <div class="letter-lock" id="letterLock">
+            <label for="letterPassword">Password</label>
+            <div class="password-row">
+              <input id="letterPassword" type="password" inputmode="numeric" placeholder="DDMMYYYY" />
+              <button class="primary-action" type="button" id="unlockLetter">Unlock</button>
+            </div>
+            <p class="hint">Hint: the day you become a mother</p>
+            <p class="lock-status" id="letterStatus" aria-live="polite"></p>
+          </div>
+
+          <article class="letter-paper" id="letterPaper" hidden>
+            <p>Hello mumma,</p>
+            <p>happy mother's day 1st of all.</p>
+            <p>AAhhh mai pahle hi bata du letters likhna nahi aata mereko to padh ke hasna to bilkul bhi nahi, nahi to mai baat nahi karungi bilkul bhi. Soo, kaha se start kare. yaar mereko itna kuch bolna tha tumne abhi ye likhne baithi hu to kuch bhi nahi yaad aa rah hai.</p>
+            <p>so lets start with me. Mumma i miss you soo much yaar. mai bata nahi sakti tumhe ki yaha itni dur rah ke mujhe tuhari kitni kami feel hoti hai. i know mai call nahi karti, tum karti ho to uthati nahi hu but i miss you. always. at every moment.</p>
+            <p>yaad hai 1st sem me mereko jub wo ganda wala bukhar hua tha, that was the 1st time jub mai itni weak tumhare bina thi and i felt it so much na yaar. sala jitna sir mere bukhar ki wajah se nahi dukhata tha na usse zayada tumhe yaad kar ke dukhta tha. and mera 1st birthday yaha peWaha pe tum call pe thi and sare dost mere waha pe the phir bhi i was feelibg so lonely. Just because tum mere pass nahi thi my 1st birthday without you.</p>
+            <p>And maine ye tumhe nahi bataya aur na hi batana chahati thi ki jub last sem mereko wo anxiety and wo sub dobara ho raha tha to how much i missed you. At that moment I realized ki aahh I survived that jee time just because of you.</p>
+            <p>Mumma mujhe pata hai i am not good at anything. Har kaam pata nahi kaise mai bigad hi deti hu but i wanna promise you this thing ki mai tumhare sare sapne pure karungi chahe wo kitne bhi chote kitne bhi bade kyu na ho i will complete them all. And ha tumhare budhe hone se pahle kar dungi you dont worry</p>
+            <p>You know you are really my best best friend, aaj tak mereko koi bhi utha nahi samjh paya jitna tum samajh leti ho not even papa. Ha kabhi kabhi wo gyan dena tododa overdose ho jata hai but I love that also.</p>
+            <p>I love everything about you i love you i love you i love you soooooooooo much jitna tum soch bhi nahi sakti utna</p>
+            <p>I love you mumma</p>
+            <p class="signature">From,<br />Your favorite person<br />( Jo ki mere aalava aur koi hona bhi nahi chahiye )</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="letter-toast" id="letterToast" hidden>ye please aakle me padhan</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
